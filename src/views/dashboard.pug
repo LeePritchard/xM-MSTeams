@@ -1,0 +1,412 @@
+style.
+  #loader{transition:all .3s ease-in-out;opacity:1;visibility:visible;position:fixed;height:100vh;width:100%;background:#fff;z-index:90000}#loader.fadeOut{opacity:0;visibility:hidden}.spinner{width:40px;height:40px;position:absolute;top:calc(50% - 20px);left:calc(50% - 20px);background-color:#333;border-radius:100%;-webkit-animation:sk-scaleout 1s infinite ease-in-out;animation:sk-scaleout 1s infinite ease-in-out}@-webkit-keyframes sk-scaleout{0%{-webkit-transform:scale(0)}100%{-webkit-transform:scale(1);opacity:0}}@keyframes sk-scaleout{0%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+link(href='styles/style.css' rel='stylesheet')
+.app
+  #loader
+    .spinner
+  script.
+    window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+    loader.classList.add('fadeOut');
+    }, 300);
+    });
+  div
+    .page-container
+      main.main-content.bgc-grey-100
+        #mainContent
+          .row.gap-20.masonry.pos-r
+            .masonry-sizer.col-md-6
+            .masonry-item.w-100
+              .row.gap-20
+                .col-md-3
+                  .layers.bd.bgc-white.p-20
+                    .layer.w-100.mB-10
+                      h6.lh-1 Total Events
+                    .layer.w-100
+                      .peers.ai-sb.fxw-nw
+                        .peer.peer-greed
+                          span#sparklinedash
+                        .peer
+                          span.d-ib.lh-0.va-m.fw-600.bdrs-10em.pX-15.pY-15.bgc-green-50.c-green-500 +10%
+                .col-md-3
+                  .layers.bd.bgc-white.p-20
+                    .layer.w-100.mB-10
+                      h6.lh-1 Total Conferences
+                    .layer.w-100
+                      .peers.ai-sb.fxw-nw
+                        .peer.peer-greed
+                          span#sparklinedash2
+                        .peer
+                          span.d-ib.lh-0.va-m.fw-600.bdrs-10em.pX-15.pY-15.bgc-red-50.c-red-500 -7%
+                .col-md-3
+                  .layers.bd.bgc-white.p-20
+                    .layer.w-100.mB-10
+                      h6.lh-1 Total Messages
+                    .layer.w-100
+                      .peers.ai-sb.fxw-nw
+                        .peer.peer-greed
+                          span#sparklinedash3
+                        .peer
+                          span.d-ib.lh-0.va-m.fw-600.bdrs-10em.pX-15.pY-15.bgc-purple-50.c-purple-500 ~12%
+                .col-md-3
+                  .layers.bd.bgc-white.p-20
+                    .layer.w-100.mB-10
+                      h6.lh-1 Total Escalations
+                    .layer.w-100
+                      .peers.ai-sb.fxw-nw
+                        .peer.peer-greed
+                          span#sparklinedash4
+                        .peer
+                          span.d-ib.lh-0.va-m.fw-600.bdrs-10em.pX-15.pY-15.bgc-blue-50.c-blue-500 33%
+            .masonry-item.col-12
+              .bd.bgc-white
+                .peers.ai-s(class='fxw-nw@lg+')
+                  .peer.peer-greed.p-20(class='w-70p@lg+ w-100@lg-')
+                    .layers
+                      .layer.w-100.mB-10
+                        h6.lh-1 Global Sites
+                      .layer.w-100
+                        #world-map-marker
+                  .peer.bdL.p-20(class='w-30p@lg+ w-100p@lg-')
+                    .layers
+                      .layer.w-100
+                        .layers
+                          .layer.w-100
+                            h5.mB-5 100k
+                            small.fw-600.c-grey-700 Visitors From USA
+                            span.pull-right.c-grey-600.fsz-sm 50%
+                            .progress.mT-10
+                              .progress-bar.bgc-deep-purple-500(role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100' style='width:50%')
+                                span.sr-only 50% Complete
+                          .layer.w-100.mT-15
+                            h5.mB-5 1M
+                            small.fw-600.c-grey-700 Visitors From Europe
+                            span.pull-right.c-grey-600.fsz-sm 80%
+                            .progress.mT-10
+                              .progress-bar.bgc-green-500(role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100' style='width:80%')
+                                span.sr-only 80% Complete
+                          .layer.w-100.mT-15
+                            h5.mB-5 450k
+                            small.fw-600.c-grey-700 Visitors From Australia
+                            span.pull-right.c-grey-600.fsz-sm 40%
+                            .progress.mT-10
+                              .progress-bar.bgc-light-blue-500(role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100' style='width:40%')
+                                span.sr-only 40% Complete
+                          .layer.w-100.mT-15
+                            h5.mB-5 1B
+                            small.fw-600.c-grey-700 Visitors From India
+                            span.pull-right.c-grey-600.fsz-sm 90%
+                            .progress.mT-10
+                              .progress-bar.bgc-blue-grey-500(role='progressbar' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100' style='width:90%')
+                                span.sr-only 90% Complete
+                        .peers.pT-20.mT-20.bdT.jc-sb.ta-c.gap-10(class='fxw-nw@lg+')
+                          .peer
+                            .easy-pie-chart(data-size='80' data-percent='75' data-bar-color='#f44336')
+                              span
+                            h6.fsz-sm New Users
+                          .peer
+                            .easy-pie-chart(data-size='80' data-percent='50' data-bar-color='#2196f3')
+                              span
+                            h6.fsz-sm New Purchases
+                          .peer
+                            .easy-pie-chart(data-size='80' data-percent='90' data-bar-color='#ff9800')
+                              span
+                            h6.fsz-sm Bounce Rate
+            .masonry-item.col-md-6
+              .bd.bgc-white
+                .layers
+                  .layer.w-100.pX-20.pT-20
+                    h6.lh-1 Monthly Stats
+                  .layer.w-100.p-20
+                    canvas#line-chart(height='220')
+                  .layer.bdT.p-20.w-100
+                    .peers.ai-c.jc-c.gapX-20
+                      .peer
+                        span.fsz-def.fw-600.mR-10.c-grey-800
+                          | 10% 
+                          i.fa.fa-level-up.c-green-500
+                        small.c-grey-500.fw-600 APPL
+                      .peer.fw-600
+                        span.fsz-def.fw-600.mR-10.c-grey-800
+                          | 2% 
+                          i.fa.fa-level-down.c-red-500
+                        small.c-grey-500.fw-600 Average
+                      .peer.fw-600
+                        span.fsz-def.fw-600.mR-10.c-grey-800
+                          | 15% 
+                          i.fa.fa-level-up.c-green-500
+                        small.c-grey-500.fw-600 Sales
+                      .peer.fw-600
+                        span.fsz-def.fw-600.mR-10.c-grey-800
+                          | 8% 
+                          i.fa.fa-level-down.c-red-500
+                        small.c-grey-500.fw-600 Profit
+            .masonry-item.col-md-6
+              .bd.bgc-white.p-20
+                .layers
+                  .layer.w-100.mB-10
+                    h6.lh-1 Todo List
+                  .layer.w-100
+                    ul.list-task.list-group(data-role='tasklist')
+                      li.list-group-item.bdw-0(data-role='task')
+                        .checkbox.checkbox-circle.checkbox-info.peers.ai-c
+                          input#inputCall1.peer(type='checkbox' name='inputCheckboxesCall')
+                          label.peers.peer-greed.js-sb.ai-c(for='inputCall1')
+                            span.peer.peer-greed Call John for Dinner
+                      li.list-group-item.bdw-0(data-role='task')
+                        .checkbox.checkbox-circle.checkbox-info.peers.ai-c
+                          input#inputCall2.peer(type='checkbox' name='inputCheckboxesCall')
+                          label.peers.peer-greed.js-sb.ai-c(for='inputCall2')
+                            span.peer.peer-greed Book Boss Flight
+                            span.peer
+                              span.badge.badge-pill.fl-r.badge-success.lh-0.p-10 2 Days
+                      li.list-group-item.bdw-0(data-role='task')
+                        .checkbox.checkbox-circle.checkbox-info.peers.ai-c
+                          input#inputCall3.peer(type='checkbox' name='inputCheckboxesCall')
+                          label.peers.peer-greed.js-sb.ai-c(for='inputCall3')
+                            span.peer.peer-greed Hit the Gym
+                            span.peer
+                              span.badge.badge-pill.fl-r.badge-danger.lh-0.p-10 3 Minutes
+                      li.list-group-item.bdw-0(data-role='task')
+                        .checkbox.checkbox-circle.checkbox-info.peers.ai-c
+                          input#inputCall4.peer(type='checkbox' name='inputCheckboxesCall')
+                          label.peers.peer-greed.js-sb.ai-c(for='inputCall4')
+                            span.peer.peer-greed Give Purchase Report
+                            span.peer
+                              span.badge.badge-pill.fl-r.badge-warning.lh-0.p-10 not important
+                      li.list-group-item.bdw-0(data-role='task')
+                        .checkbox.checkbox-circle.checkbox-info.peers.ai-c
+                          input#inputCall5.peer(type='checkbox' name='inputCheckboxesCall')
+                          label.peers.peer-greed.js-sb.ai-c(for='inputCall5')
+                            span.peer.peer-greed Watch Game of Thrones Episode
+                            span.peer
+                              span.badge.badge-pill.fl-r.badge-info.lh-0.p-10 Tomorrow
+                      li.list-group-item.bdw-0(data-role='task')
+                        .checkbox.checkbox-circle.checkbox-info.peers.ai-c
+                          input#inputCall6.peer(type='checkbox' name='inputCheckboxesCall')
+                          label.peers.peer-greed.js-sb.ai-c(for='inputCall6')
+                            span.peer.peer-greed Give Purchase report
+                            span.peer
+                              span.badge.badge-pill.fl-r.badge-success.lh-0.p-10 Done
+            .masonry-item.col-md-6
+              .bd.bgc-white
+                .layers
+                  .layer.w-100.p-20
+                    h6.lh-1 Sales Report
+                  .layer.w-100
+                    .bgc-light-blue-500.c-white.p-20
+                      .peers.ai-c.jc-sb.gap-40
+                        .peer.peer-greed
+                          h5 November 2017
+                          p.mB-0 Sales Report
+                        .peer
+                          h3.text-right $6,000
+                    .table-responsive.p-20
+                      table.table
+                        thead
+                          tr
+                            th.bdwT-0 Name
+                            th.bdwT-0 Status
+                            th.bdwT-0 Date
+                            th.bdwT-0 Price
+                        tbody
+                          tr
+                            td.fw-600 Item #1 Name
+                            td
+                              span.badge.bgc-red-50.c-red-700.p-10.lh-0.tt-c.badge-pill Unavailable
+                            td Nov 18
+                            td
+                              span.text-success $12
+                          tr
+                            td.fw-600 Item #2 Name
+                            td
+                              span.badge.bgc-deep-purple-50.c-deep-purple-700.p-10.lh-0.tt-c.badge-pill New
+                            td Nov 19
+                            td
+                              span.text-info $34
+                          tr
+                            td.fw-600 Item #3 Name
+                            td
+                              span.badge.bgc-pink-50.c-pink-700.p-10.lh-0.tt-c.badge-pill New
+                            td Nov 20
+                            td
+                              span.text-danger -$45
+                          tr
+                            td.fw-600 Item #4 Name
+                            td
+                              span.badge.bgc-green-50.c-green-700.p-10.lh-0.tt-c.badge-pill Unavailable
+                            td Nov 21
+                            td
+                              span.text-success $65
+                          tr
+                            td.fw-600 Item #5 Name
+                            td
+                              span.badge.bgc-red-50.c-red-700.p-10.lh-0.tt-c.badge-pill Used
+                            td Nov 22
+                            td
+                              span.text-success $78
+                          tr
+                            td.fw-600 Item #6 Name
+                            td
+                              span.badge.bgc-orange-50.c-orange-700.p-10.lh-0.tt-c.badge-pill Used
+                            td Nov 23
+                            td
+                              span.text-danger -$88
+                          tr
+                            td.fw-600 Item #7 Name
+                            td
+                              span.badge.bgc-yellow-50.c-yellow-700.p-10.lh-0.tt-c.badge-pill Old
+                            td Nov 22
+                            td
+                              span.text-success $56
+                .ta-c.bdT.w-100.p-20
+                  a(href='#') Check all the sales
+            .masonry-item.col-md-6
+              .bd.bgc-white.p-20
+                .layers
+                  .layer.w-100.mB-20
+                    h6.lh-1 Weather
+                  .layer.w-100
+                    .peers.ai-c.jc-sb.fxw-nw
+                      .peer.peer-greed
+                        .layers
+                          .layer.w-100
+                            .peers.fxw-nw.ai-c
+                              .peer.mR-20
+                                h3
+                                  | 32
+                                  sup &deg;F
+                              .peer
+                                canvas.sleet(width='44' height='44')
+                          .layer.w-100
+                            span.fw-600.c-grey-600 Partly Clouds
+                      .peer
+                        .layers.ai-fe
+                          .layer
+                            h5.mB-5 Monday
+                          .layer
+                            span.fw-600.c-grey-600 Nov, 01 2017
+                  .layer.w-100.mY-30
+                    .layers.bdB
+                      .layer.w-100.bdT.pY-5
+                        .peers.ai-c.jc-sb.fxw-nw
+                          .peer
+                            span Wind
+                          .peer.ta-r
+                            span.fw-600.c-grey-800 10km/h
+                      .layer.w-100.bdT.pY-5
+                        .peers.ai-c.jc-sb.fxw-nw
+                          .peer
+                            span Sunrise
+                          .peer.ta-r
+                            span.fw-600.c-grey-800 05:00 AM
+                      .layer.w-100.bdT.pY-5
+                        .peers.ai-c.jc-sb.fxw-nw
+                          .peer
+                            span Pressure
+                          .peer.ta-r
+                            span.fw-600.c-grey-800 1B
+                  .layer.w-100
+                    .peers.peers-greed.ai-fs.ta-c
+                      .peer
+                        h6.mB-10 MON
+                        canvas.sleet(width='30' height='30')
+                        span.d-b.fw-600
+                          | 32
+                          sup &deg;F
+                      .peer
+                        h6.mB-10 TUE
+                        canvas.clear-day(width='30' height='30')
+                        span.d-b.fw-600
+                          | 30
+                          sup &deg;F
+                      .peer
+                        h6.mB-10 WED
+                        canvas.partly-cloudy-day(width='30' height='30')
+                        span.d-b.fw-600
+                          | 28
+                          sup &deg;F
+                      .peer
+                        h6.mB-10 THR
+                        canvas.cloudy(width='30' height='30')
+                        span.d-b.fw-600
+                          | 32
+                          sup &deg;F
+                      .peer
+                        h6.mB-10 FRI
+                        canvas.snow(width='30' height='30')
+                        span.d-b.fw-600
+                          | 24
+                          sup &deg;F
+                      .peer
+                        h6.mB-10 SAT
+                        canvas.wind(width='30' height='30')
+                        span.d-b.fw-600
+                          | 28
+                          sup &deg;F
+                      .peer
+                        h6.mB-10 SUN
+                        canvas.sleet(width='30' height='30')
+                        span.d-b.fw-600
+                          | 32
+                          sup &deg;F
+            .masonry-item.col-md-6
+              .bd.bgc-white
+                .layers
+                  .layer.w-100.p-20
+                    h6.lh-1 Quick Chat
+                  .layer.w-100
+                    .bgc-grey-200.p-20.gapY-15
+                      .peers.fxw-nw
+                        .peer.mR-20
+                          img.w-2r.bdrs-50p(src='https://randomuser.me/api/portraits/men/11.jpg' alt='')
+                        .peer.peer-greed
+                          .layers.ai-fs.gapY-5
+                            .layer
+                              .peers.fxw-nw.ai-c.pY-3.pX-10.bgc-white.bdrs-2(class='lh-3/2')
+                                .peer.mR-10
+                                  small 10:00 AM
+                                .peer-greed
+                                  span Lorem Ipsum is simply dummy text of
+                            .layer
+                              .peers.fxw-nw.ai-c.pY-3.pX-10.bgc-white.bdrs-2(class='lh-3/2')
+                                .peer.mR-10
+                                  small 10:00 AM
+                                .peer-greed
+                                  span the printing and typesetting industry.
+                            .layer
+                              .peers.fxw-nw.ai-c.pY-3.pX-10.bgc-white.bdrs-2(class='lh-3/2')
+                                .peer.mR-10
+                                  small 10:00 AM
+                                .peer-greed
+                                  span Lorem Ipsum has been the industry&apos;s
+                      .peers.fxw-nw.ai-fe
+                        .peer.ord-1.mL-20
+                          img.w-2r.bdrs-50p(src='https://randomuser.me/api/portraits/men/12.jpg' alt='')
+                        .peer.peer-greed.ord-0
+                          .layers.ai-fe.gapY-10
+                            .layer
+                              .peers.fxw-nw.ai-c.pY-3.pX-10.bgc-white.bdrs-2(class='lh-3/2')
+                                .peer.mL-10.ord-1
+                                  small 10:00 AM
+                                .peer-greed.ord-0
+                                  span Heloo
+                            .layer
+                              .peers.fxw-nw.ai-c.pY-3.pX-10.bgc-white.bdrs-2(class='lh-3/2')
+                                .peer.mL-10.ord-1
+                                  small 10:00 AM
+                                .peer-greed.ord-0
+                                  span ??
+                    .p-20.bdT.bgc-white
+                      .pos-r
+                        input.form-control.bdrs-10em.m-0(type='text' placeholder='Say something...')
+                        button.btn.btn-primary.bdrs-50p.w-2r.p-0.h-2r.pos-a.r-1.t-1(type='button')
+                          i.fa.fa-paper-plane-o
+      footer.bdT.ta-c.p-30.lh-0.fsz-sm.c-grey-600
+        span
+          | Copyright &copy; 2017 Designed by 
+          a(href='https://colorlib.com' target='_blank' title='Colorlib') Colorlib
+          | . All rights reserved.
+  script(type='text/javascript' src='/scripts/vendor.js')
+  script(type='text/javascript' src='/scripts/bundle.js')

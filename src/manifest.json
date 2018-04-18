@@ -1,0 +1,70 @@
+{
+    "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.0",
+    "version": "1.0.0",
+    "id": "********-****-****-****-************",
+    "packageName": "com.xmatters.xmattersbot",
+    "developer": {
+        "name": "xmatters",
+        "websiteUrl": "https://www.microsoft.com",
+        "privacyUrl": "https://www.microsoft.com/privacy",
+        "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+    },
+    "name": {
+        "short": "xMatters Bot",
+        "full": "xMatters App for Microsoft Teams"
+    },
+    "description": {
+        "short": "xMatters App for Microsoft Teams",
+        "full": "This is a beta."
+    },
+    "icons": {
+        "outline": "xmatters20x20.png",
+        "color": "xmatters96x96.png"
+    },
+    "accentColor": "#60A18E",
+    "staticTabs": [{
+        "entityId": "com.xmatters.xmattersbot.hellotab",
+        "name": "Hello Tab",
+        "contentUrl": "https://hosted-site.com/hello",
+        "scopes": [
+            "personal"
+        ]
+    }],
+    "configurableTabs": [{
+        "configurationUrl": "https://hosted-site.com/configure",
+        "canUpdateConfiguration": true,
+        "scopes": [
+            "team"
+        ]
+    }],
+    "bots": [{
+        "botId": "********-****-****-****-************",
+        "needsChannelSelector": false,
+        "isNotificationOnly": false,
+        "scopes": [
+            "team",
+            "personal"
+        ]
+    }],
+    "composeExtensions": [{
+        "botId": "********-****-****-****-************",
+        "scopes": [
+            "personal",
+            "team"
+        ],
+        "commands": [{
+            "id": "getRandomText",
+            "description": "Gets some random text and images that you can insert in messages for fun.",
+            "title": "Get some random text for fun",
+            "initialRun": true,
+            "parameters": [{
+                "name": "cardTitle",
+                "description": "Card title to use",
+                "title": "Card title"
+            }]
+        }]
+    }],
+    "permissions": [],
+    "validDomains": []
+}
