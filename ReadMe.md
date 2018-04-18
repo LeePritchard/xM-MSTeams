@@ -33,9 +33,39 @@ Details of the installation go here.
 
 1. Replace all instances of "********-****-****-****-************" with your microsoftAppId.
 
+```
+.env:
+line 3
+
+manifest.json:
+line 5,
+line 42,
+line 76
+
+default.json:
+line 3
+
+```
+
 2. Replace all instances of "-----------------------" with your microsoftAppPassword.
 
+```
+.env:
+line 4
+
+/config/default.json:
+line 4
+
+```
+
 3. Replace all instances of "https://xmatters-url.com" with your xMatters URL.
+
+```
+
+/config/default.json:
+line 7
+
+```
 
 4. Add your xMatters rest username and password to /config/default.json
 
