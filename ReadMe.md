@@ -7,7 +7,9 @@ Stand alone MSTeams bot coded in NodeJS
 </kbd>
 
 # Pre-Requisites
-* Microsoft Teams bot appID and password
+* Microsoft Teams bot appID and password 
+** This requires you to sign up for an msbot account here (https://dev.botframework.com)
+** Create a bot by going to here (https://dev.botframework.com/bots/new)
 * A place to host a NodeJS application
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
 
